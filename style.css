@@ -36,14 +36,16 @@ button {
     flex-wrap: wrap;
     gap: 10vh;
     flex-grow: 2;
+    margin-inline: 0;
 }
 
 #left {
-    width: 40%;
+    width: 30%;
 }
 
 #biggest {
     padding-inline: 10%;
+    gap: 40px;
 }
 
 h1 {
@@ -55,4 +57,10 @@ h1 {
     border: solid grey 2px;
     width: 25vh;
     height: 40vh;
+}
+
+#input2 {
+    border: solid transparent 0px;
+    width: 4vh;
+    text-align: center;
 }
