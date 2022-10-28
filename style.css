@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+#contaainer {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    border: solid grey 2px;
+    height: 50vh;
+}
+
+button {
+    border-radius: 5px;
+    text-align: center;
+}
+
+#wrapped {
+    flex-wrap: wrap;
+    gap: 10vh;
+    flex-grow: 2;
+}
+
+#left {
+    width: 40%;
+}
+
+#biggest {
+    padding-inline: 10%;
+}
+
+h1 {
+    padding-inline: 10%;
+}
+
+.smallWrapped {
+    border-radius: 10px;
+    border: solid grey 2px;
+    width: 25vh;
+    height: 40vh;
+}
