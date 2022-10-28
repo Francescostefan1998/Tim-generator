@@ -1,14 +1,22 @@
+let teamm = 1;
+
 const addTeam = function (event) {
   const inputValue = document.querySelector("#input2");
   console.log(inputValue.value);
   for (let i = 0; i < inputValue.value; i++) {
     const getWrapped = document.getElementById("wrapped");
+    const bigDiv = document.createElement("div");
+    const heade = document.createElement("h1");
+    heade.innerText = "Team" + teamm;
     const newElement = document.createElement("div");
-    const getM = document.querySelector("#main");
+    const getM = document.querySelector("#main").innerHTML;
     console.log(getM);
-    newElement.innerText = getM;
+    newElement.innerHTML = getM;
     newElement.classList.add("smallWrapped");
-    getWrapped.appendChild(newElement);
+    bigDiv.appendChild(heade);
+    bigDiv.appendChild(newElement);
+    getWrapped.appendChild(bigDiv);
+    teamm++;
 
   }
 
@@ -26,6 +34,18 @@ let arrOfName = [
   "Lisa Michelin",
   "Maria Presti",
   "Sam Villa",
+  "Antonis bella",
+  "Marzia arpa",
+  "Pamel poech",
+  "Manuele vans",
+  "Franco Rossi",
+  "jusy Manchin",
+  "Sabrina daltodion",
+  "Geo Vik",
+  "Serj Sperti",
+  "Lisa belin",
+  "Maria pesti",
+  "Sam lla",
 ];
 
 /*let btn = document.querySelector("#generateRandom");
@@ -62,18 +82,20 @@ console.log(myArray);
     })
 
 */
-
+let arrTeam = [];
+console.log(arrTeam);
 const addRandomName = function (event) {
-  const randomNumber = Math.floor(Math.random() * 12);
+  const randomNumber = Math.floor(Math.random() * 24);
   console.log(randomNumber);
   const randomName = arrOfName[randomNumber];
   console.log(randomName);
   const getMain = document.querySelector("#main");
   const createDiv = document.createElement("div");
   createDiv.innerText = randomName;
+  if(randomName !== arrTeam[arrTeam.length]) {
   getMain.appendChild(createDiv);
   arrTeam.push[randomName];
-
+}
 };
 const takeNumberToInput = function (event) {
     const getinput = document.querySelector("#input2")
@@ -86,6 +108,20 @@ console.log(getinput.value);
   getinput.value = getinput.value - (1*(-1) );
 
 }
+
+const reset = function (event) {
+    const body = document.querySelector('#main');
+
+    body.innerHTML = '';
+}
+
+const cancel = function (event) {
+    const body = document.querySelector('#wrapped');
+
+    body.removeChild(body.lastChild);
+    teamm--;
+}
+
 
 
 window.onload = function () {

@@ -13,18 +13,19 @@
         <h1>TEAM GENERATOR</h1>
         <div class="flex-row" id="biggest">
             <div class="flex-column" id="left">
-                <div class="flex-row">
-                    <input type="text" name="" id="input1" placeholder="Name">
+                <div class="flex-row" id="first-line">
+                    <div class="flex-column"><p><b>Add Member</b></p><input type="text" name="" id="input1" placeholder="Name"></div>
                     <button id="generateRandom" onclick="addRandomName(event)">Add</button>
-                    <button id="meno" onclick="takeNumberToInput(event)">-</button>
-                    <input type="text" id="input2">
-                    <button id="piu" onclick="addNumberToInput(event)">+</button>
+                    <button id="meno" onclick="takeNumberToInput(event)">  -  </button>
+                    <div class="flex-column"><p><b>Number</b></p><input type="text" id="input2" placeholder="0"></div>
+                    <button id="piu" onclick="addNumberToInput(event)"> + </button>
                 </div>
                 <div class="flex-column" id="main"></div>
                 <div class="flex-row" id="addConfirm">
-                    <button onclick="addTeam(event)">Assign Member</button>
-                    <button>Reset</button>
+                    <button onclick="addTeam(event)" id="assign">Assign Member</button>
+                    <button id="reset" onclick="reset(event)">Reset</button>
                 </div>
+                <button id="cancel" onclick="cancel(event)">Cancel last tem</button>
             </div>
             <div class="flex-row" id="wrapped">
             </div>

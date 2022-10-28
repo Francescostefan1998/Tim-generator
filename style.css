@@ -2,15 +2,17 @@
     box-sizing: border-box;
 }
 body {
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     margin: 0;
 }
 
-#contaainer {
-    height: 100vh;
+#container {
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
     margin: 0;
+    background-color: lightsteelblue;
 }
 .flex-row {
     display: flex;
@@ -30,6 +32,11 @@ body {
 button {
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    scale: 1.3;
 }
 
 #wrapped {
@@ -41,6 +48,7 @@ button {
 
 #left {
     width: 30%;
+    gap: 10px;
 }
 
 #biggest {
@@ -49,7 +57,10 @@ button {
 }
 
 h1 {
+    margin: 0;
+    padding: 8vh;
     padding-inline: 10%;
+    font-size: 50px;
 }
 
 .smallWrapped {
@@ -57,10 +68,46 @@ h1 {
     border: solid grey 2px;
     width: 25vh;
     height: 40vh;
+    padding: 20px;
+    box-shadow: 5px 10px #888888;
 }
 
 #input2 {
     border: solid transparent 0px;
-    width: 4vh;
+    width: 4.5vh;
     text-align: center;
+    padding-left: 20px;
 }
+
+#assign {
+    flex-grow: 3;
+}
+
+#reset {
+    flex-grow: 1;
+}
+
+#first-line {
+    gap: 39px;
+    align-items: flex-end;
+}
+
+#input1 {
+    width: 70px;
+}
+
+input {
+    background-color: transparent;
+    border: solid transparent 0px;
+}
+
+#addConfirm {
+    gap: 2vh;
+}
+
+#wrapped h1 {
+    box-sizing: content-box;
+    margin-top: 26px;
+    padding: 10px;
+}
+
