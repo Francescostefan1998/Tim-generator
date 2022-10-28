@@ -75,6 +75,17 @@ const addRandomName = function (event) {
   arrTeam.push[randomName];
 
 };
+const takeNumberToInput = function (event) {
+    const getinput = document.querySelector("#input2")
+    getinput.value = getinput.value - 1;
+}
+
+const addNumberToInput = function (event) {
+    const getinput = document.querySelector("#input2")
+console.log(getinput.value);
+  getinput.value = getinput.value - (1*(-1) );
+
+}
 
 
 window.onload = function () {
